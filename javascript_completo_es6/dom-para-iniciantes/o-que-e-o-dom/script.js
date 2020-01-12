@@ -1,27 +1,16 @@
-// Por qual motivo o código abaixo retorna com erros?
-{
-    var cor = 'preto';
-    const marca = 'Fiat';
-    let portas = 4;
-    console.log(cor, marca, portas);
-}
-// Como corrigir o erro abaixo?
-const dois = 2;
-function somarDois(x) {
-    return x + dois;
-}
-function dividirDois(x) {
-    return x / dois;
-}
-console.log(somarDois(4));
-console.log(dividirDois(6));
+// Retorne o url da página atual utilizando o objeto window
+const hrefPagina = window.location.href;
+console.log(hrefPagina);
 
-// O que fazer para total retornar 500?
-const numero = 50;
+// Seleciona o primeiro elemento da página que
+// possua a classe ativo
+const elementoAtivo = document.querySelectorAll('.ativo');
+console.log(elementoAtivo);
 
-for(let numero = 0; numero < 10; numero++) {
-    console.log(numero);
-}
+// Retorne a linguagem do navegador
+const linguagemNavegador = window.navigator.language;
+console.log(linguagemNavegador);
 
-const total = 10 * numero;
-console.log(total);
+// Retorne a largura da janela
+const larguraJanela = window.innerWidth;
+console.log(larguraJanela);

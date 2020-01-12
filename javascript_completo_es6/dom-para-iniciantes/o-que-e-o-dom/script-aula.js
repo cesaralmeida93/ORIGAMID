@@ -1,35 +1,18 @@
-var carro = 'Fusca';
+// window.alert('Isso mesmo');
 
-function mostrarCarro() {
-    var frase = `Meu carro é um ${carro}`;
-    console.log(frase);
+const href = window.location.href;
+
+console.log(href);
+
+if(href === 'http://127.0.0.1:5500/o-que-e-o-doms/') {
+    console.log('É igual');
 }
 
-mostrarCarro(); // Meu carro é um Fusca
-console.log(carro); // Fusca
+const h1Selecionado = document.querySelector('h1');
+const h1Classes = h1Selecionado.classList;
 
-let mes = 'Dezembro';
-if(true) {
-    
-    console.log(mes);
+function callBackH1() {
+    console.log('Clicou em', h1Selecionado.innerText);
 }
 
-console.log(mes);
-
-
-// for(let i = 0; i < 10; i++) {
-//     console.log(`Número ${i}`);
-// }
-
-// console.log(i); //i is not defined
-
-const semana = 'Sexta';
-
-const data = {
-    ano: 2020,
-    mes: 'Janeiro',
-}
-
-data.ano = 2019;
-
-data.dia = 25;
+h1Selecionado.addEventListener('click', callBackH1);
