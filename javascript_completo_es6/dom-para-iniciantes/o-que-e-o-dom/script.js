@@ -1,4 +1,5 @@
 const href = window.location.href;
+const href2 = window.location.href;
 
 console.log(href);
 
