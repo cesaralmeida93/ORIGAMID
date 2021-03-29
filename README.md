@@ -2,4 +2,4 @@
 
 ## Cursos sendo feitos:
 
-- [] javascript
+- [x] javascript
