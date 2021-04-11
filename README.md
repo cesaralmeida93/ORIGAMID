@@ -1,6 +1,5 @@
 # Origamid - Cursos front-end
 
-## Cursos sendo feitos:
+## Cursos Concluídos:
 
-
-- [ ] javascript
+- [ ] javascript completo es6
