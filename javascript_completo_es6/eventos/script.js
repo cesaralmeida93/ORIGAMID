@@ -1,48 +1,40 @@
-const img = document.querySelector('img');
+// Quando o usuário clicar nos links internos do site,
+// adicione a classe ativo ao item clicado e remova dos
+// demais itens caso eles possuam a mesma. Previna
+// o comportamento padrão desses links
+const linksInternos = document.querySelectorAll('a[href^="#"]');
 
-function callBack(event) {
-  console.log(event);
-}
-
-// img.addEventListener('click', callBack);
-
-const animaisLista = document.querySelector('.animais-lista');
-
-function callbackLista(event) {
-  console.log(event.currentTarget);
-  console.log(event.target);
-  console.log(event.type);
-  console.log(event.path);
-}
-
-animaisLista.addEventListener('click', callbackLista);
-
-const linkExterno = document.querySelector('a[href^="http"]');
-
-function handleLinkExterno(event) {
+function handleLink(event) {
   event.preventDefault();
-  console.log(this);
-  console.log(event.currentTarget);
+  linksInternos.forEach(link => {
+    link.classList.remove('ativo');
+  });
+  event.currentTarget.classList.add('ativo');
 }
 
-linkExterno.addEventListener('click', handleLinkExterno);
+linksInternos.forEach(link => {
+  link.addEventListener('click', handleLink);
+});
 
-const h1 = document.querySelector('h1');
+// Selecione todos os elementos do site começando a partir do body,
+// ao clique mostre exatamente quais elementos estão sendo clicados
+const todosElementos = document.querySelectorAll('body *');
 
-function handleEvent(event) {
-  console.log(event.type, event);
-}
+// todosElementos.forEach(elemento => {
+//   elemento.addEventListener('click', (e) => {
+//     e.currentTarget.remove();
+//   })
+// });
 
-function handleKeyboard(event) {
-  if (event.key === 'a') {
-    document.body.classList.toggle('azul');
+// Utilizando o código anterior, ao invés de mostrar noconsole,
+// remova o elemento que está sendo clicado, o método remove() remove um elemento
+
+// Se o usuário clicar na tecla (t), aumente todo o texto do site.
+
+function handleClickT(e) {
+  if(e.key === 't') {
+    document.documentElement.classList.toggle('textomaior');
   }
 }
 
-// h1.addEventListener('click', handleEvent);
-// h1.addEventListener('mouseenter', handleEvent);
-// h1.addEventListener('mousemove', handleEvent);
-
-// window.addEventListener('scroll', handleEvent);
-// window.addEventListener('resize', handleEvent);
-window.addEventListener('keydown', handleKeyboard);
+window.addEventListener('keydown', handleClickT)
