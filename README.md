@@ -2,4 +2,5 @@
 
 ## Cursos Concluídos:
 
+- [x] HTML-CSS
 - [ ] javascript completo es6
