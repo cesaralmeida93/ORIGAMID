@@ -1,7 +1,6 @@
 # JavaScript Completo ES6
 
-
-### Módulos Concluídos
+## Módulos Concluídos
 - [x] JavaScript Para Iniciantes
 - [x] DOM Para Iniciantes
 - [x] JavaScript Para Iniciantes
